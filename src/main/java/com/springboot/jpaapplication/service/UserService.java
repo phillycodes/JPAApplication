@@ -1,14 +1,18 @@
-package com.springboot.JPAApplication.service;
+package com.springboot.jpaapplication.service;
 
-import com.springboot.JPAApplication.model.CurrentUserDetails;
-import com.springboot.JPAApplication.model.User;
-import com.springboot.JPAApplication.repository.UserRepository;
+import com.springboot.jpaapplication.model.CurrentUserDetails;
+import com.springboot.jpaapplication.model.User;
+import com.springboot.jpaapplication.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+/**
+ * @description Allow the use of Spring Security via the UserDetailsService class. The
+ * UserRepository allows for CRUD operations to be performed.
+ */
 @Service
 public class UserService implements UserDetailsService {
 

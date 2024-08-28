@@ -1,4 +1,4 @@
-package com.springboot.JPAApplication.model;
+package com.springboot.jpaapplication.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,4 +1,4 @@
-package com.springboot.JPAApplication;
+package com.springboot.jpaapplication;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,6 @@
-package com.springboot.JPAApplication.repository;
+package com.springboot.jpaapplication.repository;
 
-import com.springboot.JPAApplication.model.User;
+import com.springboot.jpaapplication.model.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
