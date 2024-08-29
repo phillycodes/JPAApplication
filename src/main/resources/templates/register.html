@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Registration Page</title>
+    <style>
+        .success {
+            font-style: italic;
+            color: green;
+            padding-bottom: 8px;
+        }
+
+        .failure {
+            font-style: italic;
+            color: red;
+            padding-bottom: 8px;
+        }
+    </style>
 </head>
 <body>
+<div>
+    <h2>New User Registration</h2>
+</div>
+
+<form action="#" th:action="@{/register}" th:objects="${user}" method="post">
+
+    <div th:if="${confirmationMessage}" class="success" role="alert"
+         th:text="${confirmationMessage}"></div>
+
+    <div th:if="${alreadyRegisteredMessage}" class="failure" role="alert"
+         th:text="${alreadyRegisteredMessage}"></div>
+
+    <div>
+        <input type="text" th:field="*{firstName}" placeholder="First name" class="form-control"
+               required />
+    </div><br/>
+
+    <div>
+        <input type="text" th:field="*{lastName}" placeholder="Last name" class="form-control"
+               required />
+    </div><br/>
+
+    <div>
+        <input type="email" th:field="*{email}" placeholder="Email Address" class="form-control"
+               data-error="This email address is invalid" required />
+    </div><br/>
+
+    <button type="submit">Register</button>
+</form>
 
 </body>
 </html>
